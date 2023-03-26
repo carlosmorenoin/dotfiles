@@ -1,0 +1,7 @@
+alias vpn="newrelic-chi-vpn connect full"
+alias vpn-split="newrelic-chi-vpn connect split"
+alias vpn-off="newrelic-chi-vpn disconnect"
+alias vpn-status="newrelic-chi-vpn status"
+alias vault="passwd=`security find-generic-password -w -a $LOGNAME -s chi-vpn-password` && newrelic-vault us login -method=ldap username='cmoreno' password=$passwd && passwd=''"
+alias build="./gradlew spotlessApply && ./gradlew clean check"
+alias build-with-upgrade="./gradlew generateDependencyLicenseManifest && ./gradlew spotlessApply && ./gradlew clean check"
